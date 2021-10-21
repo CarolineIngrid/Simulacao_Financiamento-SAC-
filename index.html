@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Simulação Financiamento</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
+  </head>
+
+  <body class="container coluna">
+    <div id="textocorpo" class="simulacao item coluna centro">
+      <h1>Simulação de Financiamento</h1>
+
+      <label for="valor"> valor: </label>
+
+      <input
+        type="number"
+        name="valor"
+        id="inputvalor"
+        value=""
+        min="1"
+        required
+        placeholder="Digite valor financiamento"
+      />
+
+      <label for="prazoAnos"> prazo (anos): </label>
+
+      <input
+        type="number"
+        name="inputprazoAnos"
+        id="inputprazoAnos"
+        value=""
+        required
+        placeholder="Digite prazo em anos"
+      />
+
+      <label for="jurosAno"> juros ao ano: </label>
+
+      <input
+        type="number"
+        name="jurosAno"
+        id="inputjurosAno"
+        value=""
+        min=""
+        step="0.01"
+        placeholder="Digite juros ao ano"
+      />
+
+      <br />
+      <br />
+      <button
+        type="submit"
+        class="btn item"
+        value="submit"
+        onclick="simulacao()"
+      >
+        Simular
+      </button>
+    </div>
+    <br />
+    <div class="resultado container row">
+      <div class="input1">
+        <label for="resultadoprazoMeses"> Prazo (Meses): </label> <br />
+        <input
+          id="inputresultadoprazoMeses"
+          type="number"
+          name="valor"
+          value=""
+          readonly
+        />
+      </div>
+      <br />
+      <div>
+        <label for="resultadojurosMes"> Juros ao Mês: </label>
+        <br />
+        <input
+          id="inputresultadojurosMes"
+          type="number"
+          name="resultadojurosMes"
+          value=""
+          readonly
+        />
+      </div>
+      <br />
+      <div>
+        <label for="resultadojurosAcumulado"> Juros Acumulado: </label>
+        <br />
+
+        <input
+          id="inputresultadojurosAcumulado"
+          type="number"
+          name="resultadojurosAcumulado"
+          value=""
+          readonly
+        />
+      </div>
+    </div>
+
+    <div class="tabela container coluna centro">
+      <table id="tabela">
+        <thead>
+          <tr>
+            <th>Prestação</th>
+            <th>Amortização</th>
+            <th>Juros</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>4</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>5</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+
+    <script src="simulacao.js"></script>
+  </body>
+</html>
